@@ -1,0 +1,17 @@
+<%= form_for '', url: filter_path, remote: true do |f| %>
+  <%= f.label :departure_airport %>
+  <%= f.collection_select(:departure_airport_id, @departure_airports, :id, :name) %>
+
+  <%= f.label :arrival_airport %>
+  <%= f.collection_select(:arrival_airport_id, @arrival_airports, :id, :name) %>
+
+  <%= f.label :date %>
+  <%= f.collection_select(:start_time, Flight.all, :id, :start_time) %>
+
+  <%= fields_for @passengers do |p| %>
+    <%= p.label :passengers %>
+    <%= p.select(:passenger_number, (1..4)) %>
+  <% end %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>, )

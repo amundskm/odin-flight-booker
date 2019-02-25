@@ -6,8 +6,5 @@ class CreateFlights < ActiveRecord::Migration[5.2]
       t.datetime :start_time
       t.timestamps
     end
-    add_index :flights, :departure_airport_id
-    add_index :flights, :arrival_airport_id
-
   end
 end

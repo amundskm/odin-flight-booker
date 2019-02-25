@@ -4,8 +4,6 @@ class FlightsController < ApplicationController
     @flights = Flight.all
     @departure_airports = Airport.where(:id => Flight.pluck(:departure_airport_id))
     @arrival_airports = Airport.where(:id => Flight.pluck(:arrival_airport_id))
-    @flight_dates = Flight.pluck(:start_time)
-
   end
 
   def filter

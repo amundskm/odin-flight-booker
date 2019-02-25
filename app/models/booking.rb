@@ -1,3 +1,3 @@
 class Booking < ApplicationRecord\
-  has_many booking_passengers
+  has_many passengers
 end

@@ -17,4 +17,5 @@ class FlightsController < ApplicationController
       f.html {redirect_to new_bookings_path}
     end
   end
+  
 end

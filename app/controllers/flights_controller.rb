@@ -13,8 +13,8 @@ class FlightsController < ApplicationController
                        .where(:start_time =>  params[:start_time])
     @passenger_number = params[:passenger_number]
     respond_to do |f|
-      f.html {redirect_to flights_url}
       f.js
+      f.html {redirect_to new_bookings_path}
     end
   end
 end

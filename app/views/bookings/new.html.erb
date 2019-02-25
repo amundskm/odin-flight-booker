@@ -1,16 +1,16 @@
-<%= form_for @booking, url: bookings_path do |f| %>
-  <%= f.hidden_field :flight_id, value: @booking.flight_id %>
-  <%= f.fields_for :passengers do |p| %>
-    <%= p.label :name %>
-    <%= p.text_field :name%>
-    <%= p.label :address %>
-    <%= p.text_field :address%>
-    <%= p.label :city %>
-    <%= p.text_field :city%>
-    <%= p.label :state %>
-    <%= p.text_field :state%>
-    <%= p.label :zipcode %>
-    <%= p.text_field :zipcode%>
+<%= form_for @booking, url: bookings_path do |booking| %>
+  <%= booking.hidden_field :flight_id, value: @booking.flight_id %>
+  <%= booking.fields_for :passengers do |passenger| %>
+    <%= passenger.label :name %>
+    <%= passenger.text_field :name%>
+    <%= passenger.label :address %>
+    <%= passenger.text_field :address%>
+    <%= passenger.label :city %>
+    <%= passenger.text_field :city%>
+    <%= passenger.label :state %>
+    <%= passenger.text_field :state%>
+    <%= passenger.label :zipcode %>
+    <%= passenger.text_field :zipcode%>
   <% end %>
-  <%= f.submit %>
+  <%= booking.submit %>
 <% end %>

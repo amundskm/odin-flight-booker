@@ -6,7 +6,7 @@
   <%= f.collection_select(:arrival_airport_id, @arrival_airports, :id, :name) %>
 
   <%= f.label :date %>
-  <%= f.collection_select(:start_time, Flight.all, :id, :start_time) %>
+  <%= f.collection_select(:start_time, Flight.all, :start_time, :start_time) %>
 
   <%= fields_for @passengers do |p| %>
     <%= p.label :passengers %>

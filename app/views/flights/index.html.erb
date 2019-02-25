@@ -1,5 +1,8 @@
 <%= render "flight_search" %>
 
-<ul class="flights" id="filtered_flight">
+<%= form_for '', url: new_booking_path, method: :get, remote: true do |f| %>
+  <ul id="filtered_flight">
     <%= render @flights %>
-</ul>
+  </ul>
+  <%= f.submit %>
+<% end %>

@@ -1,6 +1,8 @@
 <li>
+  <%= radio_button_tag :flight_id, flight.id  %>
   Flight Departure Airport: <%=flight.from_airport.name%>
   Flight Arrival Airport: <%=flight.to_airport.name%>
   Takeoff: <%=flight.start_time%>
   Flight Time: <%=flight.flight_time%>
+  <%= hidden_field_tag  :number_of_passengers, @passenger_number %>
 </li>
